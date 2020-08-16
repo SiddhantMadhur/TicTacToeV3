@@ -44,6 +44,9 @@ def checkWin(checker): #old system i brought here. couldnt think of anything bet
     elif table[9] == checker and table[5] == checker and table[1] == checker:
         streak = True
     
+    if streak == True:
+        SystemExit
+
     return streak
 #         
 #end of function definitions
@@ -80,7 +83,7 @@ for round in range(10): #this is the rounds
     showTable()
     if checkWin(player[x]) == True:
         print("Game ended, " + player[x] + " won!")
-        SystemExit()
+        exit()
     print("\n")
 print("Looks like the game tied.")
 os.system("pause")
